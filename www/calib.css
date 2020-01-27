@@ -1,0 +1,220 @@
+/*== calibration all element to 0 ==*/
+html, body,*{
+    border: 0;
+    outline: 0;
+    position: relative;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    scrollbar-width: thin;
+}
+html, body{
+    margin: 0;
+    padding: 0;
+}
+/*== set size 0 for some frame ==*/
+
+/*== set defult img ==*/
+img{
+	-webkit-user-drag: none;
+    vertical-align: middle;
+}
+
+/*== fill html and body and disable user-select ==*/
+html,body{
+    width: 100%;    
+    height: 100%;
+    user-select: none; 
+    -moz-user-select: none; 
+}
+
+/*== class for centralize element ==*/
+.center{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: inline-block;
+}
+/*== class for centralize width ==*/
+.centerw{
+	left: 50%;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    display: inline-block;
+}
+/*== class for centralize width ==*/
+.centerh{
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    display: inline-block;
+}
+/*== fill width element ==*/
+.fillw{
+	width: 100% !important;
+}
+/*== fill height element ==*/
+.fillh{
+	height: 100% !important;
+}
+/*== fill with and height ==*/
+.fill{
+    width: 100% !important;
+    height: 100% !important;
+} 
+/*== fill flex element for column and column row parent ==*/
+.fillf{
+	flex: 1;
+}
+/*== set child size for defult ==*/
+.column > .fillf{
+    height: 1px;
+}
+.row > .fillf{
+    width: 1px;
+}
+.row.scroll > *,
+.row.scrollw> *{
+    flex:none;
+}
+/*== class for create column view ==*/
+.column{
+    display: flex;
+    flex-direction: column;
+}
+/*== class for create row view ==*/
+.row{
+    display: flex;
+    flex-direction: row;
+} 
+/*== class for create column reverse view ==*/
+.columnr{
+    display: flex;
+    flex-direction: column-reverse;
+} 
+/*== class for create row reverse view ==*/
+.rowr{
+    display: flex;
+    flex-direction: row-reverse;
+}
+/*== class for create stack view ==*/
+.stack{
+	position: relative;
+}
+.stack > *{
+	display: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+/*== some Necessary options ==*/
+.ab{
+    position: absolute !important;
+}
+.rl{
+    position: relative !important;
+}
+.trs{
+    transition: all 200ms;
+}
+.over{
+	overflow: hidden !important;
+}
+.block{
+	display: block !important;
+}
+.inblock{
+    display: inline-block !important;
+}
+.none{
+    display: none !important;
+}
+.flex{
+    display: flex !important;
+}
+.alignc{
+    text-align: center;
+}
+.alignl{
+    text-align: left;
+}
+.alignr{
+    text-align: right;
+}
+.alignh{
+    display: flex;
+    align-items: center;
+}
+.zi{
+    z-index: 1;
+}
+
+/*== set size to defult of element ==*/
+.auto{
+    width: auto;
+    height: auto;
+}
+
+/*== create width scroll view ==*/
+.scrollw{
+	overflow: hidden;
+	overflow-x: auto;
+}
+/*== create height scroll view ==*/
+.scrollh{
+	overflow: hidden;
+	 overflow-y: auto;
+}
+
+/*== create scroll view ==*/
+.scroll{
+	overflow: auto;
+}
+
+
+/*== defult scroll style ==*/
+:hover::-webkit-scrollbar-track,
+:hover::-webkit-scrollbar-thumb {
+    visibility: visible;
+}
+::-webkit-scrollbar {
+    background: rgba(0,0,0,0); 
+    border-radius: 5px;
+    width: 5px;
+    height: 5px;
+}
+::-webkit-scrollbar-track {
+    visibility: hidden; 
+    background: rgba(170,170,170,0.15);
+    border-radius: 5px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    visibility: hidden; 
+    border-radius: 5px;
+    background: rgba(170,170,170,.9); 
+}
+
+/*== defult Strong scrolling style ==*/
+.scrolling::-webkit-scrollbar {
+    background: rgba(0,0,0,0);
+    border-radius: 5px;
+    width: 15px;
+    height: 15px;
+}
+.scrolling::-webkit-scrollbar-track {
+    background: rgba(170,170,170,0.15);
+    border-radius: 0px;
+}
+.scrolling::-webkit-scrollbar-thumb {
+    border-radius: 0px;
+    background: rgba(170,170,170,.9); 
+}
+.scrolling::-webkit-scrollbar-corner {
+    background: rgba(170,170,170,0); 
+}
+
+@media (pointer:coarse) {
+    * {scrollbar-width: none;}
+    ::-webkit-scrollbar {display:none;}
+}
