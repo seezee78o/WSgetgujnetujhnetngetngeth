@@ -71,12 +71,3 @@ function serverfsf(req, res) {
         }
     }
 }
-
-dhnjkfb
-s
-fb
-sfb
-sf
-bs
-b
-s
