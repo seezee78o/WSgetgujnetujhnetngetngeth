@@ -1,0 +1,393 @@
+.page {
+    display: none;
+    width:100%;
+    height:100%;
+}
+.active{
+    background-color: #fff !important;
+    color: #348f6c !important;
+}
+.active .icon {
+    background: #348f6c !important;
+}
+
+
+.item {
+	width: 100%;
+	display: flex;
+	flex-flow: row;
+    font-size: 15px;
+    padding: 0 7.5px;
+	align-items: center;
+    cursor: pointer;
+    color: white;
+    border-radius: 0 30px 30px 0;
+}
+.item.active::after,
+.item.active::before {
+    width: 30px;
+    height: 30px;
+    display: block;
+    position: absolute;
+    content: '';
+    background: url('../img/tb.svg');
+    left: -1px;
+    top: -29px;
+}
+.item.active::after {
+    top: initial;
+    bottom: -29px;
+    background: url('../img/bb.svg');
+}
+.item:active{
+	background: var(--tools);
+}
+.item *:first-child{
+	width: 32px;
+	height: 50px !important;
+	margin: 0 7.5px;
+}
+.item *:last-child,
+.item *:only-child{
+	border-bottom: solid .5px var(--line);
+    flex: 1;
+	margin: 0 7.5px;
+	height: auto;
+}
+.item:last-child div{
+	border: none;
+}
+
+/* =================================== pages  ====================================== */
+
+
+@font-face {
+    font-family: f1;
+    src: url(sahel.woff);
+}
+
+@font-face {
+    font-family: f2;
+    src: url(Far_Mitra.ttf);
+}
+
+input {
+    font-family: f1;
+    font-size: 18px;
+}
+
+input::placeholder {
+    color: #e3e3e3
+}
+
+body {
+    font-family: f1;
+    background-image: linear-gradient(67deg, #e3c2f4 10%, #b7e7f4 75%);
+}
+
+.icon {
+    background-color: #454545;
+    width: 50px;
+    height: 60px;
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: 32px 32px;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.main {
+    padding:15px;
+    width: 100%;
+    height: 100%;
+    background: #348f6c;
+    overflow: hidden;
+}
+
+.mainc{
+    border-radius: 15px;
+    overflow: hidden;
+}
+.header {
+    color: #ffff;
+    font-size: 25px;
+    height: 60px;
+    margin: 0 30px;
+    background-color: white;
+    border-bottom: 2px solid #ababab;
+}
+
+.menus {
+    width: 250px;
+    background: #348f6c;
+}
+.menus .icon {
+    background: #e2c992;
+}
+.menus .title {
+    width: 90%;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    font-weight: bolder;
+    color: white;
+    margin: 15px 0;
+    border-bottom: 1px solid #43a37e;
+}
+
+.maint {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    padding: 15px;
+}
+
+
+.searchbox {
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.search_field {
+    width: 0;
+    height: 50px;
+    text-align: right;
+    background: #e9e9e9;
+    padding: 0;
+    border-radius: 15px;
+    transition: all ease 300ms;
+}
+.search_field.show  {
+    width: 100%;
+    padding: 0 16px;
+}
+.search_field::placeholder {
+    color: gray;
+}
+.tabledit {
+    border-spacing: 15px 10px;
+    width: 90%;
+    left: 5%;
+    border-collapse: separate;
+}
+
+.tabledit tr {
+    background: #fff;
+    border-radius: 4px;
+}
+
+.tabledit td {
+    text-align: right;
+    border-radius: 10px;
+    padding: 10px 15px;
+    box-shadow: 2px 2px 8px #0001;
+}
+
+.table {
+    border-spacing: 0 10px;
+    width: 90%;
+    left: 5%;
+    border-collapse: separate;
+}
+
+
+.table tr:first-child {
+    background: transparent;
+    box-shadow: unset;
+    height: 30px;
+}
+
+.table th {
+    text-align: right;
+    padding: 0 15px;
+}
+
+.table tr {
+    background: #fff;
+    box-shadow: 2px 2px 8px #0001;
+    border-radius: 4px;
+}
+
+.table td:last-child {
+    border-right: 3px solid #8ec8de;
+}
+
+.table td {
+    text-align: right;
+    padding: 0 15px;
+}
+
+.table td:first-child {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.table td:last-child {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.ratingbox {
+    margin-top: 15px;
+    width: 48px;
+    height: 48px;
+    display: inline-block;
+}
+
+.ratingbox>.ratint {
+    position: absolute;
+    width: 100%;
+    padding-top: 11px;
+    text-align: center;
+}
+
+.ra1 svg>circle {
+    stroke: #ef5350;
+}
+
+._circle {
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+    stroke-dasharray: 138.23;
+    stroke-dashoffset: 138.23;
+    transition: all 1s;
+    stroke-width: 3;
+    fill: transparent;
+}
+
+
+.ra1 {
+    color: #ef5350
+}
+
+.ra2 {
+    color: #FF7043
+}
+
+.ra3 {
+    color: #FFA726
+}
+
+.ra4 {
+    color: #FFCA28
+}
+
+.ra5 {
+    color: #CDDC39
+}
+
+.ra6 {
+    color: #9CCC65
+}
+
+.ra7 {
+    color: #66BB6A
+}
+
+.ra1 svg>circle {
+    stroke: #ef5350
+}
+
+.ra2 svg>circle {
+    stroke: #FF7043
+}
+
+.ra3 svg>circle {
+    stroke: #FFA726
+}
+
+.ra4 svg>circle {
+    stroke: #FFCA28
+}
+
+.ra5 svg>circle {
+    stroke: #CDDC39
+}
+
+.ra6 svg>circle {
+    stroke: #9CCC65
+}
+
+.ra7 svg>circle {
+    stroke: #66BB6A
+}
+
+.chatpage {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    max-height: 100%;
+}
+
+.mess,
+.mefi {
+    max-width: 320px;
+    padding: 7px 12px 0px 12px;
+    margin: 5px;
+    border-radius: 20px;
+    border-bottom-right-radius: 0px;
+    background: #B3E5FC;
+    box-shadow: 1px 2px 4px 1px #0001;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 1.7;
+    word-break: break-word;
+    text-align: justify;
+}
+
+.time {
+    font-size: 12px;
+    color: #5E35B1;
+}
+
+.date {
+    color: #5E35B1;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 25px;
+    padding: 3px 8px;
+    background: #D1C4E9;
+    margin: 10px 0;
+}
+
+.filetit {
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 240px;
+}
+
+.filesize {
+    text-align: left;
+    font-size: 12px;
+
+    direction: ltr;
+    color: #5E35B1;
+}
+
+.mefiimg {
+    width: 60px;
+    background-repeat: no-repeat;
+    height: 60px;
+    background-image: url(../img/file.svg);
+}
+
+.chatfield {
+    background: #fff;
+}
+
+.chatfield .icon {
+    height: 50px;
+}
+
+.mefi {
+    padding: 7px 12px 0px 5px;
+    display: inline-flex;
+    flex-flow: row;
+}
+
+.chatinput {
+    height: 50px;
+}

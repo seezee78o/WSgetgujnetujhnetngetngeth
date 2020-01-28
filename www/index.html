@@ -5,334 +5,32 @@
     <base href="http://localhost:8090/">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <link type="text/css" rel="stylesheet" href="calib.css">
-    <script type="text/javascript" src="calib.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/calib.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script type="text/javascript" src="js/calib.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/index.js"></script>
 </head>
-<style>
-    @font-face {
-        font-family: f1;
-        src: url(sahel.woff);
-    }
-
-    @font-face {
-        font-family: f2;
-        src: url(Far_Mitra.ttf);
-    }
-
-    input {
-        font-family: f1;
-        font-size: 18px;
-    }
-
-    input::placeholder {
-        color: #e3e3e3
-    }
-
-    body {
-        font-family: f1;
-        background-image: linear-gradient(67deg, #e3c2f4 10%, #b7e7f4 75%);
-    }
-
-    .icon {
-        background-color: #a8a8a8;
-        width: 50px;
-        height: 60px;
-        -webkit-mask-position: center;
-        -webkit-mask-repeat: no-repeat;
-        -webkit-mask-size: 32px 32px;
-        overflow: hidden;
-        display: inline-block;
-    }
-
-    .main {
-        width: 94%;
-        height: 94%;
-        left: 3%;
-        top: 3%;
-        border-radius: 15px;
-        background: #fff;
-        overflow: hidden;
-        box-shadow: 1px 4px 15px 0px #0002;
-    }
-
-    .header {
-        color: #ad82c4;
-        font-size: 25px;
-        padding: 10px 15px;
-        height: 60px;
-        background-color: #1fc8db;
-        background-image: linear-gradient(141deg, #f7f3fe 0%, #f5f8fe 51%, #f5f8fe 75%);
-    }
-
-    .menus {
-        width: 250px;
-        box-shadow: inset -5px -3px 5px #0001;
-    }
-
-    .maint {
-        width: 100%;
-        height: 100%;
-        background: #f8fdfe;
-        padding: 15px;
-    }
-
-
-    .searchbox {
-        width: 90%;
-        left: 5%;
-        background: #fff;
-        border-radius: 100px;
-        height: 60px;
-        box-shadow: 1px 2px 4px 1px rgba(0, 0, 0, .09);
-        overflow: hidden;
-    }
-
-    .tabledit {
-        border-spacing: 15px 10px;
-        width: 90%;
-        left: 5%;
-        border-collapse: separate;
-    }
-
-    .tabledit tr {
-        background: #fff;
-        border-radius: 4px;
-    }
-
-    .tabledit td {
-        text-align: right;
-        border-radius: 10px;
-        padding: 10px 15px;
-        box-shadow: 2px 2px 8px #0001;
-    }
-
-
-
-
-
-
-    .table {
-        border-spacing: 0 10px;
-        width: 90%;
-        left: 5%;
-        border-collapse: separate;
-    }
-
-
-    .table tr:first-child {
-        background: transparent;
-        box-shadow: unset;
-        height: 30px;
-    }
-
-    .table th {
-        text-align: right;
-        padding: 0 15px;
-    }
-
-    .table tr {
-        background: #fff;
-        box-shadow: 2px 2px 8px #0001;
-        border-radius: 4px;
-    }
-
-    .table td:last-child {
-        border-right: 3px solid #8ec8de;
-    }
-
-    .table td {
-        text-align: right;
-        padding: 0 15px;
-    }
-
-    .table td:first-child {
-        border-top-left-radius: 4px;
-        border-bottom-left-radius: 4px;
-    }
-
-    .table td:last-child {
-        border-top-right-radius: 4px;
-        border-bottom-right-radius: 4px;
-    }
-
-    .ratingbox {
-        margin-top: 15px;
-        width: 48px;
-        height: 48px;
-        display: inline-block;
-    }
-
-    .ratingbox>.ratint {
-        position: absolute;
-        width: 100%;
-        padding-top: 11px;
-        text-align: center;
-    }
-
-    .ra1 svg>circle {
-        stroke: #ef5350;
-    }
-
-    ._circle {
-        transform: rotate(-90deg);
-        transform-origin: 50% 50%;
-        stroke-dasharray: 138.23;
-        stroke-dashoffset: 138.23;
-        transition: all 1s;
-        stroke-width: 3;
-        fill: transparent;
-    }
-
-
-    .ra1 {
-        color: #ef5350
-    }
-
-    .ra2 {
-        color: #FF7043
-    }
-
-    .ra3 {
-        color: #FFA726
-    }
-
-    .ra4 {
-        color: #FFCA28
-    }
-
-    .ra5 {
-        color: #CDDC39
-    }
-
-    .ra6 {
-        color: #9CCC65
-    }
-
-    .ra7 {
-        color: #66BB6A
-    }
-
-    .ra1 svg>circle {
-        stroke: #ef5350
-    }
-
-    .ra2 svg>circle {
-        stroke: #FF7043
-    }
-
-    .ra3 svg>circle {
-        stroke: #FFA726
-    }
-
-    .ra4 svg>circle {
-        stroke: #FFCA28
-    }
-
-    .ra5 svg>circle {
-        stroke: #CDDC39
-    }
-
-    .ra6 svg>circle {
-        stroke: #9CCC65
-    }
-
-    .ra7 svg>circle {
-        stroke: #66BB6A
-    }
-
-    .chatpage {
-        position: absolute;
-        width: 100%;
-        bottom: 0;
-        max-height: 100%;
-    }
-
-    .mess,
-    .mefi {
-        max-width: 320px;
-        padding: 7px 12px 0px 12px;
-        margin: 5px;
-        border-radius: 20px;
-        border-bottom-right-radius: 0px;
-        background: #B3E5FC;
-        box-shadow: 1px 2px 4px 1px #0001;
-        display: inline-block;
-        font-size: 16px;
-        line-height: 1.7;
-        word-break: break-word;
-        text-align: justify;
-    }
-
-    .time {
-        font-size: 12px;
-        color: #5E35B1;
-    }
-
-    .date {
-        color: #5E35B1;
-        display: inline-block;
-        font-size: 14px;
-        border-radius: 25px;
-        padding: 3px 8px;
-        background: #D1C4E9;
-        margin: 10px 0;
-    }
-
-    .filetit {
-        text-align: left;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        max-width: 240px;
-    }
-
-    .filesize {
-        text-align: left;
-        font-size: 12px;
-
-        direction: ltr;
-        color: #5E35B1;
-    }
-
-    .mefiimg {
-        width: 60px;
-        background-repeat: no-repeat;
-        height: 60px;
-        background-image: url(img/file.svg);
-    }
-    .chatfield {
-        background: #fff;
-    }
-    .chatfield .icon{
-        height: 50px;
-    }
-    .mefi {
-        padding: 7px 12px 0px 5px;
-        display: inline-flex;
-        flex-flow: row;
-    }
-    .chatinput{
-        height: 50px;
-    }
-</style>
 
 <body>
-    <div class="column main">
-        <div class="header " dir="rtl">
-            صفحه اول
-        </div>
-        <div class="row fillf">
-            <div class="menus"></div>
-            <div class="maint scroll">
-                <div class="">
-                    <div class="searchbox row">
-                        <div class="icon" style="-webkit-mask-image:url(img/search.svg)"></div>
-                        <input class="fillf" placeholder="جستجو">
+    <div class="offscreen">
+        <div class="cmess dir"></div>
+        <div class="cdialog scroll"></div>
+    </div>
+    <div class="row main">
+        <div class="mainc column fillf">
+            <div class="maint">
+                <div class="page project">
+                    <div class="header row" dir="rtl">
+                        <div class="searchbox">
+                            <div class="icon search_btn" style="-webkit-mask-image:url(img/search.svg)"></div>
+                        </div>
+                        <input class="search_field trs" placeholder="جستجو">
                     </div>
                     <br>
                     <table class='table'></table>
                 </div>
-                <div class="">
+                <div class="page profile">
                     <table class='tabledit'>
                         <tr>
                             <td>سید محمد حسن آقا محمدی</td>
@@ -368,161 +66,47 @@
                         </tr>
                     </table>
                 </div>
-                <div class="column fill">
-                    <div class="fillf">
-                        <div class="chatpage" dir="rtl">
+                <div class="page chat">
+                    <div class="column fill">
+                        <div class="fillf scroll">
+                            <div class="chatpage" dir="rtl">
+                            </div>
+                        </div>
+                        <div class="chatfield row">
+                            <div class="icon chtsend" style="-webkit-mask-image:url(img/attach_file.svg);"></div>
+                            <input type="text" class="chatinput fillf" placeholder="متن را بنویسید...">
+                            <div class="icon chtsend" style="-webkit-mask-image:url(img/send.svg);"></div>
                         </div>
                     </div>
-                    <div class="chatfield row">
-                        <div class="icon chtsend" style="-webkit-mask-image:url(img/attach_file.svg);"></div>
-                        <input type="text" class="chatinput fillf" placeholder="متن را بنویسید...">
-                        <div class="icon chtsend" style="-webkit-mask-image:url(img/send.svg);"></div>
-                    </div>
                 </div>
+            </div>
+        </div>
+        <div class="menus column" dir='rtl'>
+            <div class="title">
+                اتوماسیون اداری
+            </div>
+            <div class="item icon_project" onclick="navigation('project')">
+                <div class="icon" style="-webkit-mask-image:url(img/search.svg)"></div>
+                <div>پیشرفت پروژه ها</div>
+            </div>
+            <div class="item icon_chat" onclick="navigation('chat')">
+                <div class="icon" style="-webkit-mask-image:url(img/chat.svg)"></div>
+                <div>گفت و گو</div>
+            </div>
+            <div class="item icon_profile" onclick="nnavigation('chat')">
+                <div class="icon" style="-webkit-mask-image:url('img/file.svg')"></div>
+                <div>پروفایل کاربری</div>
             </div>
         </div>
     </div>
 </body>
 <script>
-    var curid = 1;
-    var mess = [
-        {
-            ID: 1567109497350,
-            UI: 2,
-            CH: 1,
-            ME: 'اندازه گیری توسط کارگاه ام دی ا',
-            SI: '',
-        }, {
-            ID: 1567109497350,
-            UI: 2,
-            CH: 1,
-            ME: 'اندازه گیری توسط کارگاه ام دی ا',
-            SI: '',
-        }, {
-            ID: 1567109497350,
-            UI: 2,
-            CH: 1,
-            ME: 'اندازه گیری توسط کارگاه ام دی ا',
-            SI: '',
-        }, {
-            ID: 1577109497350,
-            UI: 2,
-            CH: 1,
-            ME: 'اندازه گیری توسط کارگاه ام دی ا',
-            SI: '',
-        }, {
-            ID: 1557109497350,
-            UI: 2,
-            CH: 1,
-            ME: 'اندازه گیری توسط کارگاه ام دی ا',
-            SI: '20 KB',
-        }, {
-            ID: 1557109497350,
-            UI: 2,
-            CH: 1,
-            ME: 'اندازه گیری توسط کارگاه ام دی ا',
-            SI: '30 KB',
-        },
-    ]
-    for (var i in mess) {
-        addmess(mess[i], (i == 0 ? undefined : mess[i - 1].ID))
-    }
-    function addmess(i, ld) {
-        if (typeof ld != 'undefined') {
-            console.log(ld, i.ID)
-            adddate(ld, i.ID)
+    $(".search_btn").on('click',function(){
+        if($(".search_field").cls("show")) {
+            $(".search_field").class("show", '');
+        }else {
+            $(".search_field").class("show");
         }
-        var time = new Date(i.ID);
-        time = time.getHours() + ':' + time.getMinutes()
-        if (i.SI == '') {
-            $('.chatpage').append('end', '<div><div class="mess"><div>' + i.ME + '</div><div class="time">' + time + '</div></div></div>')
-        } else {
-            $('.chatpage').append('end', '<div><div class="mefi"><div class="fillf"><div class="filetit">' + i.ME + '</div><div class="filesize">' + i.SI + '</div><div class="time">' + time + '</div></div><div class="mefiimg"></div></div></div>')
-        }
-    }
-
-    function adddate(ld, cd) {
-        var cdh = new Date(cd);
-        var ldh = new Date(ld);
-        var date = cdh.toLocaleDateString('fa')
-        cdh = (cdh.getHours() * 3600) + (cdh.getMinutes() * 60) + cdh.getSeconds();
-        ldh = (ldh.getHours() * 3600) + (ldh.getMinutes() * 60) + ldh.getSeconds();
-        if ((cd - ld >= 86400000) || cdh < ldh)
-            $('.chatpage').append('end', '<div class="alignc"><div class="date">' + date + '</div></div>')
-    }
-    new Date().toLocaleDateString('fa')
-    var st = [
-        'ثبت مشخصات',
-        'اندازه گیری توسط کارگاه ام دی اف',
-        'ارجاع عکس و فیلم به محل طراحی',
-        'پایان طراحی',
-        'محاسبه توسط طراح',
-        'تایید فاکتور در کارگاه',
-        'تایید نهایی فاکتور',
-        'عقد قرارداد',
-        'تسویه حساب',
-        'شروع کار کارگاه',
-        'تهیه متریال',
-        'شروع محاسبات و برش',
-        'مونتاژ',
-        'ارسال به محل',
-        'درحال نصب',
-        'تایید مشتری',
-        'تسویه نهایی']
-
-    window.ratingc = function (rate) {
-        if (rate < 20)
-            color = "ra1"
-        else if (rate < 40)
-            color = "ra2"
-        else if (rate < 50)
-            color = "ra3"
-        else if (rate < 60)
-            color = "ra4"
-        else if (rate < 70)
-            color = "ra5"
-        else if (rate < 80)
-            color = "ra6"
-        else if (rate <= 100)
-            color = "ra7"
-        return [color, ((138.23 * (100 - rate)) / 100)]
-
-    }
-
-    setTimeout(function () {
-        //$(".mlpscir").style.strokeDashoffset = rate[1]
-    }, 40)
-    var s = [
-        {
-            NM: 'محمدی',
-            ST: 11,
-            PR: 50,
-            TI: '1392/1/2',
-            LU: '1390/1/3',
-        }, {
-            NM: 'محمدی',
-            ST: 5,
-            PR: 90,
-            TI: '1392/1/2',
-            LU: '1390/1/3',
-        }, {
-            NM: 'محمدی',
-            ST: 1,
-            PR: 20,
-            TI: '1392/1/2',
-            LU: '1390/1/3',
-        }
-    ]
-    var out = '<tr><th>اخرین بروزرسانی</th><th>ثبت تاریخ</th><th>پیشرفت</th><th>وضعیت</th><th>نام</th></tr>'
-    for (var i of s) {
-        var prg = Math.round(i.ST / 17 * 100)
-        var rt = ratingc(prg)
-        out += '<tr><td>' + i.LU + '</td><td>' + i.TI + '</td><td><div class="ratingbox ' + rt[0] + '"><div class="ratint">' + prg + '%</div><svg width="48" height="48"><circle class="_circle" r="22" cx="24" cy="24" style="stroke-dashoffset:' + rt[1] + '"></circle></svg></div></td><td>' + st[i.ST] + '</td><td>' + i.NM + '</td></tr>'
-    }
-    document.querySelector('.table').innerHTML = out
-
-    out = ''
-   // document.querySelector('.tabledit').innerHTML = out
+    })
 </script>
-
 </html>
