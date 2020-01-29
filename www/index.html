@@ -13,24 +13,68 @@
 </head>
 
 <body>
+    <div class="over fill ab">
+        <div class="headbackl"></div>
+        <div class="headbackr"></div>
+    </div>
     <div class="offscreen">
         <div class="cmess dir"></div>
         <div class="cdialog scroll"></div>
     </div>
+    <div class="login center ab none">
+        <input class="input" type="text" name="" placeholder="نام کاربری">
+        <input class="input" type="password" name="" id="" placeholder="رمز عبور">
+        <input class="btn" type="submit" value="ورود به سیستم">
+    </div>
     <div class="row main">
         <div class="mainc column fillf">
             <div class="maint">
+                <div class="page profile">
+                    <div class="row fill">
+                        <div class="card">
+                        </div>
+                        <div class="card ml" dir="rtl">
+                            <div class="avatar">
+                                <img src="https://ibighit.com/txt/images/txt/profile/member-sb.jpg" alt="">
+                            </div>
+                            <div class="item">
+                                <div class="icon" style="-webkit-mask-image:url('img/file.svg')"></div>
+                                <div>نام و نام خانوادگی</div>
+                            </div>
+                            <div class="item">
+                                <div class="icon" style="-webkit-mask-image:url('img/file.svg')"></div>
+                                <div>موبایل</div>
+                            </div>
+                            <div class="item">
+                                <div class="icon" style="-webkit-mask-image:url('img/file.svg')"></div>
+                                <div>نام کاربری</div>
+                            </div>
+                            <div class="item">
+                                <div class="icon" style="-webkit-mask-image:url('img/file.svg')"></div>
+                                <div>رمزعبور</div>
+                            </div>
+                            <div class="item">
+                                <div class="icon" style="-webkit-mask-image:url('img/file.svg')"></div>
+                                <div>بیوگرافی</div>
+                            </div>
+                            <div class="item">
+                                <div class="icon" style="-webkit-mask-image:url('img/file.svg')"></div>
+                                <div>حوزه فعالیت</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="page project">
                     <div class="header row" dir="rtl">
-                        <div class="searchbox">
+                        <div class="searchbox row">
                             <div class="icon search_btn" style="-webkit-mask-image:url(img/search.svg)"></div>
+                            <input class="search_field trs" placeholder="جستجو">
                         </div>
-                        <input class="search_field trs" placeholder="جستجو">
                     </div>
                     <br>
                     <table class='table'></table>
                 </div>
-                <div class="page profile">
+                <div class="page profileasd">
                     <table class='tabledit'>
                         <tr>
                             <td>سید محمد حسن آقا محمدی</td>
@@ -86,27 +130,29 @@
                 اتوماسیون اداری
             </div>
             <div class="item icon_project" onclick="navigation('project')">
-                <div class="icon" style="-webkit-mask-image:url(img/search.svg)"></div>
+                <div class="icon trs" style="-webkit-mask-image:url(img/search.svg)"></div>
                 <div>پیشرفت پروژه ها</div>
             </div>
             <div class="item icon_chat" onclick="navigation('chat')">
-                <div class="icon" style="-webkit-mask-image:url(img/chat.svg)"></div>
+                <div class="icon trs" style="-webkit-mask-image:url(img/chat.svg)"></div>
                 <div>گفت و گو</div>
             </div>
-            <div class="item icon_profile" onclick="nnavigation('chat')">
-                <div class="icon" style="-webkit-mask-image:url('img/file.svg')"></div>
+            <div class="item icon_profile" onclick="navigation('profile')">
+                <div class="icon trs" style="-webkit-mask-image:url('img/file.svg')"></div>
                 <div>پروفایل کاربری</div>
             </div>
         </div>
     </div>
+
 </body>
 <script>
-    $(".search_btn").on('click',function(){
-        if($(".search_field").cls("show")) {
+    $(".search_btn").on('click', function () {
+        if ($(".search_field").cls("show")) {
             $(".search_field").class("show", '');
-        }else {
+        } else {
             $(".search_field").class("show");
         }
     })
 </script>
+
 </html>

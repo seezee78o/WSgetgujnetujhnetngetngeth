@@ -109,7 +109,7 @@ wss.on('connection', function (ws, req) {
 });
 
 function onclose() {
-    remuser(this["agara"]["id"], this);
+    //remuser(this["agara"]["id"], this);
     delete this["agara"];
     delete this;
 }
